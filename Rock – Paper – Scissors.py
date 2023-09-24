@@ -4,6 +4,10 @@ rock = "Rock"
 paper = "Paper"
 scissors = "Scissors"
 
+RED = "\033[91m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+
 player_move = input("Choose [r]ock, [p]aper, [s]cissors: ")
 
 if player_move == "r":
@@ -37,10 +41,10 @@ print(f"The computer chose {computer_move}.")
 if (player_move == rock and computer_move == scissors) or \
     (player_move == paper and computer_move == rock) or \
     (player_move == scissors and computer_move == paper):
-    print("You win!")
+    print(GREEN + "You win!")
 
 elif player_move == computer_move:
-    print("Draw!")
+    print(YELLOW + "Draw!")
 
 else:
-    print("You lose!")
+    print(RED + "You lose!")
